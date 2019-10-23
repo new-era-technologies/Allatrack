@@ -45,10 +45,18 @@ fetch(myRequest)
 	}
 });
 
-var wrapInfo = document.querySelector('.wrapper__info');
-var f = (this.innerWidth + 'px');
-var s = (this.innerWidth / 87) + '%';
-var str = f + ' - ' + s;
-wrapInfo.style.width = 'calc(' + str + ')';
-wrapInfo.style.width = '-webkit-calc(' + str + ')';
-wrapInfo.style.width = '-o-calc(' + str + ')';
+// var wrapInfo = document.querySelector('.wrapper__info');
+// // var f = (this.innerWidth + 'px');
+// // var s = (this.innerWidth / 87) + '%';
+// // var str = f + ' - ' + s;
+// // wrapInfo.style.width = 'calc(' + str + ')';
+// // wrapInfo.style.width = '-webkit-calc(' + str + ')';
+// // wrapInfo.style.width = '-o-calc(' + str + ')';
+
+// var s2 = (this.innerWidth / 57) + 'em';
+// var str2 = f + ' - ' + s2;
+
+// // wrapInfo.style.marginTop = 'calc(' + str2 + ')';
+// // wrapInfo.style.width = '-webkit-calc(' + str + ')';
+// // wrapInfo.style.width = '-o-calc(' + str + ')';
+// console.log('calc(' + (this.innerWidth + 'px') + ' - ' + (this.innerWidth / 57) + 'em' + ')');
