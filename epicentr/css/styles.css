@@ -51,13 +51,15 @@ body {
 	margin-top: -o-calc(100vh - 70em);*/
 	width: calc(100vw - 10%);
 	margin-top: 10%;
-	position: relative;
+	/*position: relative;*/
 	background: #F0F4FA;
 	border-radius: 150px 0px 0px 0px;
+	display: flex;
+	justify-content: space-between;
 }
 
 .wrapper__info_box {
-	width: 100%;
+	width: 45%;
 	height: 90%;
 }
 .wrapper__info_box__outer {
@@ -94,19 +96,24 @@ body {
 	color: #AAAAAA;
 }
 .wrapper__info_box__outer__title_box {
-	width: 597px;
+
+}
+.wrapper__info_box__outer__title_box__inner {
+	min-width: 597px;
 	margin-top: 24px;
 }
-.wrapper__info_box__outer__title_box__text {
+.wrapper__info_box__outer__title_box__inner__text {
 	font-family: 'Roboto', sans-serif;
 	font-size: 32px;
 	font-weight: bold;
 	color: #262626;
 }
-.wrapper__info_box__outer__text_box {
-	width: 611px;
+.wrapper__info_box__outer__title_box__text_box {
+	min-width: 550px;
+	max-width: 1500px;
+	margin-top: 24px;
 }
-.wrapper__info_box__outer__text_box__text {
+.wrapper__info_box__outer__title_box__text_box__text {
 	font-family: 'Roboto', sans-serif;
 	font-size: 18px;
 	font-weight: 400;
@@ -139,6 +146,8 @@ body {
 	width: 80px;
 }
 .wrapper__info_box__outer__contacts_box {
+	min-width: 550px;
+	margin-top: 24px;
 	display: flex;
 }
 .wrapper__info_box__outer__contacts_box__inner {
@@ -170,26 +179,28 @@ body {
 
 
 .messages_box {
-	width: 801px;
-	height: 865px;
+	width: 55%;
+	/*height: 100%;
 	background-image: url(../img/back-shadow-x2.png);
 	background-repeat: no-repeat;
-	background-color: transparent;
-	position: absolute;
-	top: -105px;
+	background-color: transparent;*/
+	/*position: absolute;
+	/*top: -105px;
 	left: 525px;
 	background-size: cover;
+	overflow: hidden;*/
+	height: 120%;
 	overflow: hidden;
+	margin-left: 160px;
+	margin-top: -100px;
 }
 .messages_box__outer {
-	height: 778px;
+	width: 379px;
+	height: 110%;
 	padding-bottom: 150px;
 	background-color: #E4ECF4;
 	border: 10px solid #262626;
 	border-radius: 44px;
-	position: absolute;
-	top: 22px;
-	left: 219px;
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
