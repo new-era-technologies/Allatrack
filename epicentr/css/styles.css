@@ -87,7 +87,7 @@ body {
 .wrapper__info_box__outer__logo_box__inner__title {
 	font-family: 'Roboto', sans-serif;
 	font-size: 24px;
-	font-weight: bold;
+	font-weight: 700;
 	color: #262626;
 }
 .wrapper__info_box__outer__logo_box__inner__text {
@@ -99,13 +99,13 @@ body {
 
 }
 .wrapper__info_box__outer__title_box__inner {
-	min-width: 597px;
+	min-width: 520px;
 	margin-top: 24px;
 }
 .wrapper__info_box__outer__title_box__inner__text {
 	font-family: 'Roboto', sans-serif;
 	font-size: 32px;
-	font-weight: bold;
+	font-weight: 700;
 	color: #262626;
 }
 .wrapper__info_box__outer__title_box__text_box {
@@ -119,22 +119,20 @@ body {
 	font-weight: 400;
 	color: #AAAAAA;
 }
+.wrapper__info_box__outer__pad_box {
+	max-width: 600px;
+}
 .wrapper__info_box__outer__buttons_box {
+	min-width: 500px;
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
 }
 .wrapper__info_box__outer__buttons_box__inner {
 	display: flex;
 }
 .wrapper__info_box__outer__buttons_box__inner > a {
 	display: flex;
-}
-.wrapper__info_box__outer__buttons_box__inner:nth-child(1),
-.wrapper__info_box__outer__buttons_box__inner:nth-child(3) {
-	margin-right: 42px;
-}
-.wrapper__info_box__outer__buttons_box__inner:nth-child(2) {
-	margin-right: 16px;
 }
 .wrapper__info_box__outer__buttons_box__inner__img--app {
 	width: 142px;
@@ -146,9 +144,10 @@ body {
 	width: 80px;
 }
 .wrapper__info_box__outer__contacts_box {
-	min-width: 550px;
+	min-width: 500px;
 	margin-top: 24px;
 	display: flex;
+	justify-content: space-between;
 }
 .wrapper__info_box__outer__contacts_box__inner {
 	display: flex;
@@ -215,13 +214,15 @@ body {
 .messages_box__outer { -ms-overflow-style: none; }
 
 .messages_box__outer__inner {
-	width: 305px;
-	margin: 20px;
+	margin: 10px 20px 10px 20px;
 	padding: 20px;
 	background: #FFFFFF;
 	box-shadow: 0px 8px 40px -14px #262626;
 	border-radius: 32px;
 	box-sizing: border-box;
+}
+.messages_box__outer__inner:first-child {
+	margin-top: 20px;
 }
 .messages_box__outer__inner__logo {
 	width: 100%;
@@ -255,7 +256,7 @@ body {
 	text-align: left;
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
-	font-weight: bold;
+	font-weight: 700;
 	color: #262626;
 	margin-top: 20px;
 }
@@ -267,9 +268,8 @@ body {
 	margin-top: 15px;
 }
 
-/*@media only screen and (min-width: 2000px) {
-	.wrapper__info {
-		width: 80%;
-		margin-top: 25%;
+@media only screen and (max-width: 1600px) {
+	.wrapper__partner {
+		margin: 0 15px 24px 15px;
 	}
-}*/
+}
