@@ -277,6 +277,28 @@ section {
 	margin-top: 15px;
 }
 
+/*popup-link*/
+.popup__link_box {
+	width: 280px;
+	display: block;
+	background: transparent linear-gradient(81deg, #2EA8FE 0%, #047FF6 100%);
+	box-shadow: 0px 8px 40px #000014;
+	border-radius: 8px;
+	position: fixed;
+	left: 50%;
+	transform: translate(-50%, 0);
+	bottom: 10%;
+}
+.popup__link {
+	display: block;
+	padding: 13px 24px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
+	font-weight: 700;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
 @media only screen and (min-width: 1150px) {
 	.wrapper {
 		width: calc(100% - 100vw/9);
@@ -395,6 +417,11 @@ section {
 	/*messages-box chat-box*/
 	.messages_box__chat_box {
 		width: 330px;
+	}
+
+	/*popup-link*/
+	.popup__link_box {
+		display: none;
 	}
 }
 
