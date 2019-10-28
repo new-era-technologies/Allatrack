@@ -191,7 +191,7 @@ section {
 	/*min-width: 400px;*/
 	/*height: 659px;*/
 	margin: 0 auto;
-	background-image: url(../img/back-shadow123.png);
+	background-image: url(../img/back-shadow.png);
 	background-size: cover;
 	position: absolute;
 	top: 40px;
@@ -217,7 +217,7 @@ section {
 	border-right: 10px solid #262626;
 	border-radius: 44px 44px 0 0;
 	box-sizing: border-box;
-	box-shadow: 0 0 20px 5px #aaaaaa;
+	box-shadow: 0 0 20px 5px #AEB1B6;
 }
 .messages_box__chat_box::-webkit-scrollbar { width: 0 !important }
 .messages_box__chat_box { overflow: -moz-scrollbars-none; }
@@ -306,7 +306,7 @@ section {
 	position: fixed;
 	top: 0;
 	left: 0;
-	background: #aaaaaa;
+	background: rgba(170, 170, 170, 0.9);
 	opacity: 0;
 	display: none;
 	transition: all 0.5s;
@@ -387,10 +387,10 @@ section {
 
 @media only screen and (min-width: 1150px) {
 	.wrapper {
-		width: calc(100% - 100vw/9);
+		width: calc(100% - 100vw/8);
 		height: 92%;
 		top: 8%;
-		left: calc(100vw/9);
+		left: calc(100vw/8);
 		border-radius: 150px 0px 0px 0px;
 	}
 	.container {
@@ -511,10 +511,17 @@ section {
 	}
 }
 
+@media only screen and (min-width: 1200px) {
+	.wrapper {
+		width: calc(100% - 100vw/6);
+		left: calc(100vw/6);
+	}
+}
+
 @media only screen and (min-width: 1300px) {
 	.wrapper {
-		width: calc(100% - 100vw/7);
-		left: calc(100vw/7);
+		width: calc(100% - 100vw/8);
+		left: calc(100vw/8);
 	}
 	.partner_box__inner {
 		height: 105%;
@@ -582,8 +589,10 @@ section {
 
 @media only screen and (min-width: 4000px) {
 	.wrapper {
+		width: calc(100% - 100vw/3);
 		height: 89%;
 		top: 11%;
+		left: calc(100vw/3);
 	}
 	.outer {
 		margin-top: 8%;

@@ -49,6 +49,12 @@ if (window.innerWidth < 1150) {
 	/*height of box-shadow messages-box*/
 }
 back.style.height = mesBox.offsetHeight + 'px';
+/*left pos wrapper*/
+if ((1330 < window.innerWidth && window.innerWidth < 1600) || (1630 < window.innerWidth && window.innerWidth < 2000) || (2230 < window.innerWidth && window.innerWidth < 2500)) {
+var ghgh = (window.innerWidth - container.offsetWidth)/2;
+wrap.style.left = ghgh + 'px';
+wrap.style.width = 'calc(100% - ' + ghgh + 'px)';
+}
 
 /*show popup*/
 var opacity = 0;
