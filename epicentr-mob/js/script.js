@@ -6,9 +6,6 @@ var body = document.querySelector('body');
 
 /*scroll messages_box by use wheel in window*/
 window.addEventListener('wheel', function(e) {
-
-	// var topPos = mesBox.offsetTop;
-
 	var y = e.deltaY;
 
 	// if (y > 0) {
@@ -20,61 +17,25 @@ window.addEventListener('wheel', function(e) {
 	// 	mesBox.scrollTop -= y;
 	// }
 
-	console.log(window.scrollY, document.body.clientHeight)
-
 	if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-		// if (y > 0) {
-			mesBox.scrollTop += y;
-		// 	console.log('as')
-		// } else {
-		// 	mesBox.scrollTop -= y;
-		// 	console.log('sa')
-		// }
+		mesBox.scrollTop += y;
 	}
 });
 
 
 /* fetch api data */
-var myRequest = new Request('https://darmen.app/servicesapi/v1/ru/notification/all?api_token=SjzwVPmw86z3Mdm8Vv06WsWSXSf9ElssQSkoqQBtJISu2Pg9pq4jmRHOEKE4&limit=10');
+var req = new Request('https://darmen.app/servicesapi/v1/ru/notification/all?api_token=SjzwVPmw86z3Mdm8Vv06WsWSXSf9ElssQSkoqQBtJISu2Pg9pq4jmRHOEKE4&limit=10');
 
-fetch(myRequest)
+fetch(req)
 .then(function(response) { 
 	return response.json(); 
 })
 .then(function(data) {
 	console.log(data)
-	// for (var i = 0; i <= res.length; i++) {
-	// outer.innerText('<div class="messages_box__outer__inner">' +
-	// 					'<div class="messages_box__outer__inner__logo">' + 
-	// 						'<div class="messages_box__outer__inner__logo__img_box">' + 
-	// 							'<img class="messages_box__outer__inner__logo__img_box__img" src="' + res[i].notifications.type.type_preview + '" alt="logo-pin">' +
-	// 						'</div>' +
-	// 						'<div class="messages_box__outer__inner__logo__info">' +
-	// 							'<p class="messages_box__outer__inner__logo__info__city">г. Алматы</p>' +
-	// 							'<p class="messages_box__outer__inner__logo__info__date">' + res[i].notifications.type.created_at + '</p>' +
-	// 						'</div>' +
-	// 					'</div>' +
-	// 					'<div class="messages_box__outer__inner__title">' + res[i].notifications.title + '</div>' +
-	// 					'<div class="messages_box__outer__inner__text">' + res[i].notifications.text + '</div>' +
-	// 				'</div>');
+	// for (var i = 0; i <= 9; i++) {
+	// 	mesBox.innerHTML += ""
 	// }
 });
-
-
-
-// fetch(myRequest, {
-// 					'Access-Control-Allow-Origin' : '*',
-// 					dataType: 'jsonp',
-//         		})
-// 			.then(function(response) { 
-// 				return response.json(); 
-// 			})
-// 			.then(function(data) {
-// 				console.log(data)
-// 			});
-
-
-
 
 var wrap = document.querySelector('.wrapper');
 var contBox = document.querySelector('.info_box__contacts_box');
@@ -89,4 +50,37 @@ if (window.innerWidth < 1150) {
 }
 back.style.height = mesBox.offsetHeight + 'px';
 
-console.log(window.innerWidth)
+/*show popup*/
+var opacity = 0;
+var popupHeight = 0;
+function FadePopup() {
+	if (opacity < 1) {
+		opacity += .1;
+		setTimeout(function(){FadePopup()},10);
+	}
+	document.querySelector('.popup').style.opacity = opacity;
+}
+function AnimatePopup() {
+	if (popupHeight < 1) {
+		popupHeight += 272;
+	} else {
+		popupHeight -= 272;
+	}
+	document.querySelector('.popup__outer').style.height = popupHeight + 'px';
+}
+var popLink = document.querySelector('.popup__link');
+popLink.addEventListener('click', function(e) {
+	e.preventDefault();
+	document.querySelector('.popup').style.display = 'block';
+	FadePopup();
+	document.querySelector('.popup__link_box').style.display = 'none';
+	setTimeout(AnimatePopup, 100);
+});
+
+/*close popup*/
+var popLink = document.querySelector('.popup__inner__but_cl_box');
+popLink.addEventListener('click', function(e) {
+	e.preventDefault();
+	AnimatePopup();
+	setTimeout(function(){document.querySelector('.popup').style.display = 'none'}, 500);
+});
